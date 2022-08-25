@@ -1,0 +1,14 @@
+<table border="3">
+    <thead>
+        <tr>
+            <th>Question Text</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for question in latest_question_list %}
+            <tr>
+                <td><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></td>
+            </tr>
+    {% endfor %}
+    </tbody>
+</table

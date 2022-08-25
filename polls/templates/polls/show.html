@@ -1,0 +1,23 @@
+<h1>Pregunta</h1>
+<p>Text: {{ question }}
+
+<h2>Opciones</h2>
+<table border="3">
+    <thead>
+        <tr>
+            <th>Choise Text</th>
+            <th>Vote</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for choise in question.choise_set.all %}
+            <tr>
+                <td>{{ choise.choise_text }}</td>
+                <td>{{ choise.vote }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table
+
+<br>
+<a href="/polls/">Volver a la lista</a>
